@@ -17,7 +17,7 @@ This custom keyboard layout is heavily inspired by **Programmer Dvorak**, but it
 +---++--++--++--++--++--++--++--++--++--++--++--++--++------+
 | Tab | Q | W | E | R | T | Y | U | I | O | P | / | @ |  \  |
 +-----++-++-++-++-++-++-++-++-++-++-++-++-++-++-++-++-------+
-| Esc/ | A | S | D | F | G | H | J | K | L | ; | ' | Enter  |
+| Esc/ | A | S | D | F | G | H | J | K | L | ; | " | Enter  |
 | Ctrl |   |   |   |   |   |   |   |   |   |   |   |        |
 +------+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+--------+
 | Shift  | Z | X | C | V | B | N | M | , | . | - |  Shift   |
@@ -31,7 +31,7 @@ This custom keyboard layout is heavily inspired by **Programmer Dvorak**, but it
 +---++--++--++--++--++--++--++--++--++--++--++--++--++------+
 | Tab | Q | W | E | R | T | Y | U | I | O | P | ? | ^ |  #  |
 +-----++-++-++-++-++-++-++-++-++-++-++-++-++-++-++-++-------+
-| Esc/ | A | S | D | F | G | H | J | K | L | : | " | Enter  |
+| Esc/ | A | S | D | F | G | H | J | K | L | : | ' | Enter  |
 | Ctrl |   |   |   |   |   |   |   |   |   |   |   |        |
 +------+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+--------+
 | Shift  | Z | X | C | V | B | N | M | < | > | _ |  Shift   |
