@@ -1,0 +1,62 @@
+;; Kanata configuration (Universal)
+;; Replicating keyd layout from /etc/keyd/default.conf
+
+(defsrc
+  grv  1    2    3    4    5    6    7    8    9    0    min  eql
+  tab  q    w    e    r    t    y    u    i    o    p    [    ]    \
+  caps a    s    d    f    g    h    j    k    l    ;    '    ret
+  lsft z    x    c    v    b    n    m    ,    .    /    rsft
+  lctl lalt           spc            ralt rctl
+)
+
+(defalias
+  ;; Capslock = Alt when held, Esc when tapped (Base layer)
+  cap (tap-hold 200 200 esc lalt)
+  ;; Capslock = Ctrl when held, Esc when tapped (Russian layer)
+  cap-rus (tap-hold 200 200 esc lctl)
+  
+  ;; RightShift = Shift when held, Backspace when tapped
+  rsh (tap-hold 200 200 bspc rsft)
+  
+  ;; Layer toggle: LeftAlt + LeftShift (simulating the toggle)
+  to-rus (layer-switch russian)
+  to-base (layer-switch base)
+  
+  ;; Programmer Top Row (EN)
+  n1 S-4
+  n2 S-=
+  n3 [
+  n4 S-[
+  n5 S-9
+  n6 S-7
+  n7 =
+  n8 S-0
+  n9 S-]
+  n0 ]
+  n- S-8
+  n= S-1
+  
+  ;; EN Punctuation
+  sl  S-- ;; / = S-minus
+  sq  "   ;; ' = "
+  sm  :   ;; ; = :
+  lb  /   ;; [ = /
+  rb  S-2 ;; ] = S-2
+)
+
+(deflayer base
+  min  @n1  @n2  @n3  @n4  @n5  @n6  @n7  @n8  @n9  @n0  @n-  @n=
+  tab  q    w    e    r    t    y    u    i    o    p    @lb  @rb  \
+  @cap a    s    d    f    g    h    j    k    l    @sm  @sq  ret
+  lsft z    x    c    v    b    n    m    ,    .    @sl  @rsh
+  lctl @to-rus        spc            ralt rctl
+)
+
+;; Russian Layer (Phonetic mapping as in keyd)
+(deflayer russian
+  min  1    2    3    4    5    6    7    8    9    0    -    =
+  tab  й    ц    у    к    е    н    г    ш    щ    з    х    ъ    \
+  @cap-rus ф    ы    в    а    п    р    о    л    д    ж    э    ret
+  lsft я    ч    с    м    и    т    ь    б    ю    .    @rsh
+  lctl @to-base       spc            ralt rctl
+)

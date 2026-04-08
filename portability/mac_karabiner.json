@@ -1,0 +1,132 @@
+{
+  "title": "Programmer Top Row & Modifiers (like Keyd)",
+  "rules": [
+    {
+      "description": "Caps Lock to Escape (tap) / Control (hold)",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": { "key_code": "caps_lock", "modifiers": { "optional": ["any"] } },
+          "to": [{ "key_code": "left_control" }],
+          "to_if_alone": [{ "key_code": "escape" }]
+        }
+      ]
+    },
+    {
+      "description": "Right Shift to Backspace (tap) / Right Shift (hold)",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": { "key_code": "right_shift", "modifiers": { "optional": ["any"] } },
+          "to": [{ "key_code": "right_shift" }],
+          "to_if_alone": [{ "key_code": "delete_or_backspace" }]
+        }
+      ]
+    },
+    {
+      "description": "Programmer Top Row (Numbers to Symbols, Shift+Numbers to Numbers)",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": { "key_code": "1", "modifiers": { "mandatory": ["shift"] } },
+          "to": [{ "key_code": "1" }]
+        },
+        {
+          "type": "basic",
+          "from": { "key_code": "1" },
+          "to": [{ "key_code": "4", "modifiers": ["shift"] }]
+        },
+        {
+          "type": "basic",
+          "from": { "key_code": "2", "modifiers": { "mandatory": ["shift"] } },
+          "to": [{ "key_code": "2" }]
+        },
+        {
+          "type": "basic",
+          "from": { "key_code": "2" },
+          "to": [{ "key_code": "equal_sign", "modifiers": ["shift"] }]
+        },
+        {
+          "type": "basic",
+          "from": { "key_code": "3", "modifiers": { "mandatory": ["shift"] } },
+          "to": [{ "key_code": "3" }]
+        },
+        {
+          "type": "basic",
+          "from": { "key_code": "3" },
+          "to": [{ "key_code": "open_bracket" }]
+        },
+        {
+          "type": "basic",
+          "from": { "key_code": "4", "modifiers": { "mandatory": ["shift"] } },
+          "to": [{ "key_code": "4" }]
+        },
+        {
+          "type": "basic",
+          "from": { "key_code": "4" },
+          "to": [{ "key_code": "open_bracket", "modifiers": ["shift"] }]
+        },
+        {
+          "type": "basic",
+          "from": { "key_code": "5", "modifiers": { "mandatory": ["shift"] } },
+          "to": [{ "key_code": "5" }]
+        },
+        {
+          "type": "basic",
+          "from": { "key_code": "5" },
+          "to": [{ "key_code": "9", "modifiers": ["shift"] }]
+        },
+        {
+          "type": "basic",
+          "from": { "key_code": "6", "modifiers": { "mandatory": ["shift"] } },
+          "to": [{ "key_code": "6" }]
+        },
+        {
+          "type": "basic",
+          "from": { "key_code": "6" },
+          "to": [{ "key_code": "7", "modifiers": ["shift"] }]
+        },
+        {
+          "type": "basic",
+          "from": { "key_code": "7", "modifiers": { "mandatory": ["shift"] } },
+          "to": [{ "key_code": "7" }]
+        },
+        {
+          "type": "basic",
+          "from": { "key_code": "7" },
+          "to": [{ "key_code": "equal_sign" }]
+        },
+        {
+          "type": "basic",
+          "from": { "key_code": "8", "modifiers": { "mandatory": ["shift"] } },
+          "to": [{ "key_code": "8" }]
+        },
+        {
+          "type": "basic",
+          "from": { "key_code": "8" },
+          "to": [{ "key_code": "0", "modifiers": ["shift"] }]
+        },
+        {
+          "type": "basic",
+          "from": { "key_code": "9", "modifiers": { "mandatory": ["shift"] } },
+          "to": [{ "key_code": "9" }]
+        },
+        {
+          "type": "basic",
+          "from": { "key_code": "9" },
+          "to": [{ "key_code": "close_bracket", "modifiers": ["shift"] }]
+        },
+        {
+          "type": "basic",
+          "from": { "key_code": "0", "modifiers": { "mandatory": ["shift"] } },
+          "to": [{ "key_code": "0" }]
+        },
+        {
+          "type": "basic",
+          "from": { "key_code": "0" },
+          "to": [{ "key_code": "close_bracket" }]
+        }
+      ]
+    }
+  ]
+}
