@@ -1,5 +1,5 @@
 {
-  "title": "Programmer Top Row (ULTIMATE FIX FOR ISO \u00a7\u00b1 KEY)",
+  "title": "Programmer Top Row (Bypass OS for Tilde ~)",
   "rules": [
     {
       "description": "Caps Lock to Option/Esc, Right Shift to Backspace",
@@ -660,10 +660,7 @@
           },
           "to": [
             {
-              "key_code": "grave_accent_and_tilde",
-              "modifiers": [
-                "shift"
-              ]
+              "shell_command": "osascript -e 'tell application \"System Events\" to keystroke \"~\"'"
             }
           ],
           "conditions": [
@@ -710,10 +707,7 @@
           },
           "to": [
             {
-              "key_code": "grave_accent_and_tilde",
-              "modifiers": [
-                "shift"
-              ]
+              "shell_command": "osascript -e 'tell application \"System Events\" to keystroke \"~\"'"
             }
           ],
           "conditions": [
