@@ -1,8 +1,8 @@
 {
-  "title": "Programmer Top Row & Custom Symbols (Fixed Mac ISO & Backslash)",
+  "title": "Programmer Top Row (Mac fixes for Tilde & Underscore)",
   "rules": [
     {
-      "description": "Caps Lock to Option/Esc, Right Shift to Backspace (Global)",
+      "description": "Caps Lock to Option/Esc, Right Shift to Backspace",
       "manipulators": [
         {
           "type": "basic",
@@ -913,10 +913,7 @@
           },
           "to": [
             {
-              "key_code": "hyphen",
-              "modifiers": [
-                "shift"
-              ]
+              "key_code": "hyphen"
             }
           ],
           "conditions": [
@@ -937,7 +934,10 @@
           },
           "to": [
             {
-              "key_code": "hyphen"
+              "key_code": "hyphen",
+              "modifiers": [
+                "shift"
+              ]
             }
           ],
           "conditions": [
