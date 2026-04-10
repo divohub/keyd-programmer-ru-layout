@@ -1,5 +1,5 @@
 {
-  "title": "Programmer Top Row & Custom Symbols (Exact match)",
+  "title": "Programmer Top Row & Custom Symbols (Fixed Mac ISO & Backslash)",
   "rules": [
     {
       "description": "Caps Lock to Option/Esc, Right Shift to Backspace (Global)",
@@ -651,7 +651,7 @@
         {
           "type": "basic",
           "from": {
-            "key_code": "slash",
+            "key_code": "non_us_backslash",
             "modifiers": {
               "mandatory": [
                 "shift"
@@ -660,7 +660,7 @@
           },
           "to": [
             {
-              "key_code": "equal_sign",
+              "key_code": "grave_accent_and_tilde",
               "modifiers": [
                 "shift"
               ]
@@ -680,14 +680,11 @@
         {
           "type": "basic",
           "from": {
-            "key_code": "slash"
+            "key_code": "non_us_backslash"
           },
           "to": [
             {
-              "key_code": "hyphen",
-              "modifiers": [
-                "shift"
-              ]
+              "key_code": "grave_accent_and_tilde"
             }
           ],
           "conditions": [
@@ -804,56 +801,6 @@
         {
           "type": "basic",
           "from": {
-            "key_code": "backslash",
-            "modifiers": {
-              "mandatory": [
-                "shift"
-              ]
-            }
-          },
-          "to": [
-            {
-              "key_code": "3",
-              "modifiers": [
-                "shift"
-              ]
-            }
-          ],
-          "conditions": [
-            {
-              "type": "input_source_if",
-              "input_sources": [
-                {
-                  "language": "^en$"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "type": "basic",
-          "from": {
-            "key_code": "backslash"
-          },
-          "to": [
-            {
-              "key_code": "backslash"
-            }
-          ],
-          "conditions": [
-            {
-              "type": "input_source_if",
-              "input_sources": [
-                {
-                  "language": "^en$"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "type": "basic",
-          "from": {
             "key_code": "open_bracket",
             "modifiers": {
               "mandatory": [
@@ -941,6 +888,56 @@
               "modifiers": [
                 "shift"
               ]
+            }
+          ],
+          "conditions": [
+            {
+              "type": "input_source_if",
+              "input_sources": [
+                {
+                  "language": "^en$"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "slash",
+            "modifiers": {
+              "mandatory": [
+                "shift"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "hyphen",
+              "modifiers": [
+                "shift"
+              ]
+            }
+          ],
+          "conditions": [
+            {
+              "type": "input_source_if",
+              "input_sources": [
+                {
+                  "language": "^en$"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "slash"
+          },
+          "to": [
+            {
+              "key_code": "hyphen"
             }
           ],
           "conditions": [
