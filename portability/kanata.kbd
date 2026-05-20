@@ -11,9 +11,8 @@
 
 (defalias
   ;; Capslock = Alt when held, Esc when tapped (Base layer)
-  cap (tap-hold 200 200 esc lalt)
-  ;; Capslock = Ctrl when held, Esc when tapped (Russian layer)
-  cap-rus (tap-hold 200 200 esc lctl)
+  ;; We use a layer-toggle for navigation when held
+  cap (tap-hold 200 200 esc (layer-toggle nav))
   
   ;; RightShift = Shift when held, Backspace when tapped
   rsh (tap-hold 200 200 bspc rsft)
@@ -42,6 +41,16 @@
   sm  :   ;; ; = :
   lb  /   ;; [ = /
   rb  S-2 ;; ] = S-2
+
+  ;; Nav Aliases
+  lft left
+  dn  down
+  up  up
+  rgt rght
+  pgu pgup
+  pgd pgdn
+  zmi C-=
+  zmo C--
 )
 
 (deflayer base
@@ -56,7 +65,15 @@
 (deflayer russian
   min  1    2    3    4    5    6    7    8    9    0    -    =
   tab  й    ц    у    к    е    н    г    ш    щ    з    х    ъ    \
-  @cap-rus ф    ы    в    а    п    р    о    л    д    ж    э    ret
+  @cap ф    ы    в    а    п    р    о    л    д    ж    э    ret
   lsft я    ч    с    м    и    т    ь    б    ю    .    @rsh
   lctl @to-base       spc            ralt rctl
+)
+
+(deflayer nav
+  _    _    _    _    _    _    _    _    _    _    _    _    _
+  _    _    _    @pgu _    _    _    _    @zmi @zmo _    _    _    _
+  _    _    _    @pgd _    _    @lft @dn  @up  @rgt _    _    _
+  _    _    _    _    _    _    _    _    _    _    _    _
+  _    _              _              _    _
 )
